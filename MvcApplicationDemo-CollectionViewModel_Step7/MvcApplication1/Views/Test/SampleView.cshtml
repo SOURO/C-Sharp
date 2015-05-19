@@ -1,0 +1,35 @@
+﻿@using MvcApplication1.ViewModels
+@model BikeListViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MVCDemo_C#</title>
+</head>
+<body>
+    <div>
+        Welcome to this Demo station of C# - MVC !!
+    </div>
+    <hr />
+    <div>
+        <b>Bike Details :</b><br />
+    </div>
+    <table>
+        <tr>
+            <td><u>Name</u></td>
+            <td><u>Price</u></td>
+        </tr>
+        @foreach(BikeViewModel vmBike in Model.Bikes)
+        {
+            <tr>
+                <td>@vmBike.BikeNameAndModel<br /></td>
+                <td><span style="color:@vmBike.BikeColor">@vmBike.BikePrice</span><br /></td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

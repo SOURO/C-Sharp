@@ -1,0 +1,30 @@
+﻿@model MvcApplication1.Models.Bike
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MVCDemo_C#</title>
+</head>
+<body>
+    <div>
+        Welcome to this Demo station of C# - MVC !!
+    </div>
+    <hr />
+    <div>
+    </div>
+    <b>Bike Details :</b><br />
+        @Model.BikeName @Model.BikeModel<br />
+        @if(Model.BikePrice>200000)
+        { 
+            <span style="color:green">Price : @Model.BikePrice.ToString("G")</span><br />    
+        }
+        else
+        {
+            <span style="color:red">Price : @Model.BikePrice.ToString("G")</span><br />
+        }
+</body>
+</html>
